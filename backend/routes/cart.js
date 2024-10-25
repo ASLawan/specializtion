@@ -151,3 +151,5 @@ router.post("/checkout", authenticate, async (req, res) => {
     res.status(500).json({ error: "Server error- checkout failed!" });
   }
 });
+
+export default router;
