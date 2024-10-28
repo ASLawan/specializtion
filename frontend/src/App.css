@@ -1,42 +1,723 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d1d1d1;
+}
+
+nav {
+  width: 100%;
+  /* height: 100px; */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background-color: #d1d1d1;
+  color: #1e2a38;
+}
+
+.nav-container > .logo {
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e2a38;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  cursor: pointer;
+  /* margin-left: 2rem; */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-links li {
+  list-style: none;
+  /* background-color: #1e2a38; */
+  /* padding: ; */
+}
+
+.nav-links li .link {
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  color: #1e2a38;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart {
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  color: #1e2a38;
+  cursor: pointer;
+  /* margin-right: 6rem; */
+  font-weight: bold;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #1e2a38;
+}
+
+#shop {
+  /* padding: 2rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#shop .shop-link {
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 0.2rem;
+  color: snow;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+#shop .shop-link:hover {
+  color: #1e2a38;
+  background-color: #d1d1d1;
+  /* padding: 0.5rem; */
+  border: none;
+  border-radius: 5px 5px 0 0;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.header .logo-text > h2 {
+  text-decoration: underline;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: snow;
+  font-size: 75px;
+  font-weight: bold;
+  font-style: normal;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.header .logo-text > span {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  color: snow;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #1e2a38;
+  background-color: #fff;
+}
+
+.footer .footer-text h4 {
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e2a38;
+  font-size: 75px;
+  font-weight: bold;
+  font-style: normal;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.footer .socials {
+  font-family: "Times New Roman", Times, serif;
+  color: #1e2a38;
+}
+.footer .socials h5 {
+  font-size: 35px;
+  margin-bottom: 2rem;
+}
+
+.footer .socials p {
+  font-size: 20px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* sign up form */
+.signup,
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
+  width: 100%;
+}
+
+.signup h2,
+.login h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: #1e2a38;
+  margin-bottom: 1rem;
+}
+
+.signup .s-form,
+.login .l-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 35%;
+  background-color: #1e2a38;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 2px 10px 8px rgba(0, 0, 0, 0.3);
+}
+
+.signup .s-form input,
+.login .l-form input {
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  height: 2rem;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.signup .s-form button,
+.login .l-form button {
+  outline: none;
+  margin-top: 1rem;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #1e2a38;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.signup .s-form button:hover,
+.login .l-form button:hover {
+  background-color: #1e2a38;
+  color: snow;
+}
+/* ABOUT */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* background-image: url("../assets/imgs/logo2.png");
+  background-repeat: no-repeat;
+  background-position-x: right; */
+}
+
+.about-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* gap: 10rem; */
+  background-color: #1e2a38;
+  width: 100%;
+  padding: 2rem;
+}
+
+.about-header .about-text h1 {
+  color: snow;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 95px;
+}
+
+.about-desc {
+  background-color: snow;
+  color: #1e2a38;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: stretch;
+  gap: 2rem;
+}
+
+.about-desc p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+
+/* DASHBOARD */
+#admin {
+  background-color: #1e2a38;
+  color: snow;
+}
+
+#admin-link {
+  color: snow;
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+
+.logo #logo-text {
+  color: snow;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 3rem;
+}
+
+#admin span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.admin-dashboard {
+  display: flex;
+  flex-direction: row;
+  /* gap: 2rem; */
+  width: 100%;
+}
+
+.admin-dashboard .aside {
+  background-color: #1e2a38;
+  padding: 2rem;
+  min-width: 280px;
+  min-height: 400px;
+}
+
+.admin-dashboard .aside .admin-sidebar nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  color: snow;
+  list-style: none;
+}
+
+.admin-dashboard .aside .admin-sidebar nav ul li {
+  min-width: 280px;
+}
+.admin-nav-link {
+  text-decoration: none;
+  color: snow;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.admin-nav-link:hover {
+  background-color: #fff;
+  color: #1e2a38;
+  border-radius: 5px;
+}
+
+.main {
+  padding-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+/* ADMIN ADD PRODUCT */
+.admin-add-product {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #1e2a38;
+  min-width: 500px;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+.admin-add-product h2 {
+  color: snow;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.add-form input {
+  outline: none;
+  border: none;
+  padding-left: 0.5rem;
+  height: 1.8rem;
+  border-radius: 5px;
+  color: gray;
+}
+
+.add-form textarea {
+  width: 100%;
+  color: gray;
+  height: 4rem;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.add-form button {
+  border: none;
+  padding: 4px;
+  font-weight: bold;
+  color: #1e2a38;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.add-form button:hover {
+  background-color: #1e2a38;
+  color: snow;
+}
+
+.message {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: snow;
+  margin: 0 auto;
+  border: 1px solid snow;
+  padding: 1rem;
+}
+
+/* ADMIN PRODUCTS ORDERS AND USERS*/
+.admin-products,
+.admin-orders,
+.admin-users,
+.cart-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e2a38;
+  padding: 2rem;
+  width: 70rem;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+#cart-products {
+  margin: 2rem auto;
+}
+
+#cart-products .noCartProducts {
+  color: snow;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.admin-products-title,
+.admin-orders-title,
+.admin-users-title,
+.cart-products-title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  color: snow;
+  margin-bottom: 1rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem auto;
+  font-size: 16px;
+  text-align: left;
+}
+
+.table thead tr {
+  /* background-color: #009879;  */
+  background-color: #1e2a38;
+  color: #ffffff;
+  text-align: left;
+}
+
+.table th,
+.table td {
+  /* padding: 12px 15px; */
+  padding: 1rem 2rem;
+  border: 1px solid snow;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  background-color: snow;
+  color: #1e2a38;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.table tbody tr th {
+  border: 1px solid #1e2a38;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
 }
 
-.card {
-  padding: 2em;
+/* HOMEPAGE */
+.homepage {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.read-the-docs {
-  color: #888;
+.welcome p::first-letter {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e2a38;
+}
+
+.welcome p {
+  text-indent: 3rem;
+}
+
+.homepage .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.homepage .content h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: #1e2a38;
+}
+
+.homepage .content hr {
+  width: 100%;
+  height: 0.2rem;
+  background-color: #1e2a38;
+  border: none;
+  margin: 0.2rem auto;
+}
+
+.homepage .content p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
+
+.homepage .content p::first-letter {
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1e2a38;
+}
+
+.homepage .content p {
+  text-indent: 1.5rem;
+}
+
+/* SHOP */
+.client-products {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.client-product {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* width: 300px; */
+  align-items: center;
+}
+
+.client-products-title {
+  display: flex;
+  justify-content: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: #1e2a38;
+  font-size: 25px;
+}
+
+#prod {
+  display: flex;
+  flex-direction: column;
+}
+
+.prod-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.prod-info .name,
+.price > span,
+.stock > span {
+  font-family: "Times New Roman", Times, serif;
+  color: #1e2a38;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#prod .actions {
+  display: flex;
+  /* justify-content: center; */
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+#prod .actions button {
+  padding: 10px 10px;
+  /* border: none; */
+  border-radius: 6px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#view {
+  background-color: #1e2a38;
+  color: snow;
+  cursor: pointer;
+}
+
+#view:hover,
+#addto:hover {
+  background-color: snow;
+  color: #1e2a38;
+  border: 1px solid #1e2a38;
+}
+
+#addto {
+  background-color: #1e2a38;
+  color: snow;
+  cursor: pointer;
+}
+.prod-img {
+  border: 1px solid #1e2a38;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+/* PRODUCT DETAIL */
+.product-detail {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 2rem;
+}
+.product-detail .title {
+  background-color: #1e2a38;
+  padding: 1rem 6rem;
+  color: snow;
+  border-radius: 2rem;
+  text-align: center;
+}
+.product-detail h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  font-size: 35px;
+}
+.product-detail .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 1.5rem;
+}
+.product-detail .content .product-img {
+  border: 1px solid #1e2a38;
+  width: 300px;
+  height: 300px;
+  border-radius: 1rem;
+}
+.product-detail .content .product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-detail .content .product-info p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+.product-detail .content .product-info p span {
+  color: #1e2a38;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.product-detail .content .product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-detail .content .product-actions .btn #btn {
+  padding: 0.5rem 3rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #1e2a38;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.product-detail .content .product-actions .btn #btn:hover {
+  background-color: #1e2a38;
+  color: snow;
+}
+.product-detail .desc {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  padding-left: 10rem;
+  /* align-items: flex-start; */
+}
+
+.product-detail .desc h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: #1e2a38;
 }
