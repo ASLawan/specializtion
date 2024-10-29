@@ -4,18 +4,18 @@
 
 ## Table of Contents
 
-Project Overview
-Features
-Tech Stack
-Setup and Installation
-Folder Structure
-Environment Variables
-API Endpoints
-Frontend Features
-Admin Functionality
-Lessons Learned
-Future Enhancements
-License
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Setup and Installation](#setup-and-installation)
+- [Folder Structure](#folder-structure)
+- [Environment Variables](#environment-variables)
+- [API Endpoints](#api-endpoints)
+- [Frontend Features](#frontend-features)
+- [Admin Functionality](#admin-functionality)
+- [Lessons Learned](#lessons-learned)
+- [Future Enhancements](#future-enhancements)
+- [License](#license)
 
 ## Project Overview
 
@@ -90,24 +90,24 @@ The application should now be running on:
 
 ## Folder Structure
 
-specialization/
-├── backend/
-│ ├── requests/ # Backend logic RESTClient test routes
-│ ├── models/ # MongoDB data models
-│ ├── routes/ # API route definitions
-│ ├── middleware/ # Authentication and error-handling middleware
-│ ├── uploads/ # Product images stored locally
-│ ├── server.js # Entry point for the Express server
-│ └── .env # Environment variables
-├── frontend/
-│ ├── public/ # Static files
-│ ├── src/
-│ │ ├── components/ # Reusable UI components
-│ │ ├── pages/ # Application pages
-│ │ ├── redux/ # Redux setup and slices
-│ │ ├── App.jsx # Main application component
-│ │ └── index.html # Entry point for React
-└── README.md # Project documentation
+- specialization/
+  - backend/
+    - requests/ # Backend logic RESTClient test routes
+    - models/ # MongoDB data models
+    - routes/ # API route definitions
+    - middleware/ # Authentication and error-handling middleware
+    - uploads/ # Product images stored locally
+    - server.js # Entry point for the Express server
+    - .env # Environment variables
+  - frontend/
+    - public/ # Static files
+    - src/
+      - components/ # Reusable UI components
+      - pages/ # Application pages
+      - redux/ # Redux setup and slices
+      - App.jsx # Main application component
+      - index.html # Entry point for React
+  - README.md # Project documentation
 
 ## Environment Variables
 
@@ -122,22 +122,22 @@ Create a .env file in the backend folder with the following:
 
 ### Auth Routes
 
-**POST /api/auth/register:** Register a new user
-**POST /api/auth/login:** Login a user and retrieve a JWT token
+- **POST /api/auth/register:** Register a new user
+- **POST /api/auth/login:** Login a user and retrieve a JWT token
 
 ### Product Routes
 
-**GET /api/products:** Fetch all products
-**GET /api/products/:id:** Fetch a single product
-**POST /api/products:** Add a new product (admin only)
-**PUT /api/products/:id:** Update product details (admin only)
-**DELETE /api/products/:id:** Delete a product (admin only)
+- **GET /api/products:** Fetch all products
+- **GET /api/products/:id:** Fetch a single product
+- **POST /api/products:** Add a new product (admin only)
+- **PUT /api/products/:id:** Update product details (admin only)
+- **DELETE /api/products/:id:** Delete a product (admin only)
 
 ### Order Routes
 
-**POST /api/orders:** Create a new order
-**GET /api/orders:** Get all orders (admin only)
-**GET /api/orders/user:** Get orders for a specific user
+- **POST /api/orders:** Create a new order
+- **GET /api/orders:** Get all orders (admin only)
+- **GET /api/orders/user:** Get orders for a specific user
 
 ## Frontend Features
 
@@ -158,22 +158,22 @@ Create a .env file in the backend folder with the following:
 ### Admin Functionality
 
 - Admin users can access a protected dashboard after logging in.
-  **Product Management:** Admins can add, update, and delete products. Images are uploaded using Multer and stored in MongoDB Atlas.
-  **Order Management:** Admins can view all orders and manage order statuses.
+  - **Product Management:** Admins can add, update, and delete products. Images are uploaded using Multer and stored in MongoDB Atlas.
+  - **Order Management:** Admins can view all orders and manage order statuses.
 
 ### Lessons Learned
 
-**Backend-Frontend Integration:** Establishing a consistent data flow between frontend and backend via RESTful APIs.
-**Image Uploads and Path Normalization:** Managing file paths correctly across different environments to ensure consistent image display.
-**Role-Based Access Control:** Implementing secure, conditional routing based on user roles.
-**User Experience:** Designing intuitive and responsive layouts with Bootstrap for a seamless experience across devices.
+- **Backend-Frontend Integration:** Establishing a consistent data flow between frontend and backend via RESTful APIs.
+- **Image Uploads and Path Normalization:** Managing file paths correctly across different environments to ensure consistent image display.
+- **Role-Based Access Control:** Implementing secure, conditional routing based on user roles.
+- **User Experience:** Designing intuitive and responsive layouts with Bootstrap for a seamless experience across devices.
 
 ## Future Enhancements
 
-**Payment Gateway Integration:** Enable secure online payment for orders.
-**Customer Reviews:** Allow users to leave reviews for products.
-**Advanced Search and Filtering:** Enhance the search functionality to include filters by price, rating, and availability.
-**Order Tracking:** Provide real-time tracking for orders.
+- **Payment Gateway Integration:** Enable secure online payment for orders.
+- **Customer Reviews:** Allow users to leave reviews for products.
+- **Advanced Search and Filtering:** Enhance the search functionality to include filters by price, rating, and availability.
+- **Order Tracking:** Provide real-time tracking for orders.
 
 ## License
 
