@@ -12,16 +12,29 @@ export const fetchProducts = createAsyncThunk(
 );
 export const fetchProductById = createAsyncThunk(
   "products/fetchProductById",
-  async (id) => {
-    const response = await axios.get(`${baseUrl}/api/products/${id}`);
-    return response.data;
+  async (id, { rejectWithValue }) => {
+    try {
+      const response = await axios.get(`${baseUrl}/api/products/${id}`);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error.response.data || "Error fetching product");
+    }
   }
 );
 export const addProduct = createAsyncThunk(
   "products/addproduct",
-  async (newProduct) => {
-    const response = await axios.post(`${baseUrl}/api/products`, newProduct);
-    console.log(`Fetched products: ${response}`);
+  async (productData) => {
+    const formData = new FormData();
+
+    Object.keys(productData).forEach((key) => {
+      formData.append(key, formData[key]);
+    });
+
+    const response = await axios.post(`${baseUrl}/api/products`, productData, {
+      headers: { "Content-Type": "multipart/form-data" },
+    });
+
+    // console.log(`Fetched products: ${response}`);
     return response.data;
   }
 );
