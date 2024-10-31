@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // CartBadge.js
 import React from "react";
 import { useSelector } from "react-redux";
@@ -11,7 +12,7 @@ const CartBadge = () => {
 
   return (
     <div>
-      <span>Cart {totalItems ? { totalItems } : "(empty)"}</span>
+      <span>Cart: {totalItems ? { totalItems } : "(empty)"}</span>
     </div>
   );
 };

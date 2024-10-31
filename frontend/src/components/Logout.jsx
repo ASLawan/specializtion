@@ -13,13 +13,22 @@ const Logout = () => {
     navigate("/");
   };
 
+  const cancelLogout = () => {
+    navigate("/");
+  };
+
   return (
     <div className="logout">
       <div className="logout-text">
         <p>Are you ready to logout?</p>
       </div>
-      <div className="logout-btn">
-        <button onClick={() => handleLogout()}>Logout</button>
+      <div className="btns">
+        <div className="logout-btn">
+          <button onClick={() => handleLogout()}>Logout</button>
+        </div>
+        <div className="cancel-btn">
+          <button onClick={() => cancelLogout()}>Cancel</button>
+        </div>
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -16,7 +18,7 @@ const AdminNavbar = ({ user }) => {
             </Link>
           </li>
         </ul>
-        <Link to="/" className="cart" id="admin-link">
+        <Link to="/logout" className="cart" id="admin-link">
           Logout
         </Link>
       </div>

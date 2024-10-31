@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 // import React from "react";
 // import { Link } from "react-router-dom";
 // import CartBadge from "./CartBadge";
@@ -76,7 +78,7 @@ const Navbar = ({ user }) => {
     <nav>
       <div className="nav-container">
         <Link to="/" className="logo">
-          Hello, {user?.name || "Customer!"}
+          Hello, {user?.name || ""}
         </Link>
         <ul className="nav-links">
           <li>
