@@ -2,18 +2,20 @@ import express from "express";
 import Product from "../models/Product.js";
 import { adminCheck } from "../middlware/authorize.js";
 import authenticate from "../middlware/authorize.js";
+import upload from "../middlware/multerImg.js";
 
 const router = express.Router();
 
 // Create a new product
-router.post("/", async (req, res) => {
+router.post("/", upload.single("image"), async (req, res) => {
   try {
     const { name, description, price, image, stock, category } = req.body;
+    const filePath = req.file.path.replace(/\\/g, "/");
     const product = new Product({
       name,
       description,
       price,
-      image,
+      image: req.file ? filePath : "",
       stock,
       category,
     });
