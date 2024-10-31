@@ -1,4 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
+import Necklace from "../components/Necklace";
+import Bangles from "../components/Bangles";
+import Bags from "../components/Bags";
+import Mats from "../components/Mats";
 
 const Home = () => {
   return (
@@ -31,6 +36,7 @@ const Home = () => {
             rem neque, alias culpa laborum consequuntur nulla harum temporibus
             libero veritatis veniam placeat illo!
           </p>
+          <Bangles />
         </div>
         <div className="necklaces">
           <h2>Necklaces</h2>
@@ -43,6 +49,7 @@ const Home = () => {
             deleniti ducimus! Tempora possimus officiis reiciendis? Rem nobis
             quibusdam dolorum, quasi voluptatibus rerum repellat.
           </p>
+          <Necklace />
         </div>
         <div className="bags">
           <h2>Bags</h2>
@@ -55,6 +62,7 @@ const Home = () => {
             minima corporis dolorum excepturi hic accusamus porro in ex impedit
             magni, quidem eaque, voluptatum minus reiciendis itaque illo.
           </p>
+          <Bags />
         </div>
         <div className="decor">
           <h2>House Decor</h2>
@@ -67,6 +75,7 @@ const Home = () => {
             necessitatibus a impedit officia, recusandae voluptas non sapiente
             veniam totam at deleniti animi modi quae! Debitis.
           </p>
+          <Mats />
         </div>
         <div className="classics">
           <h2>More...</h2>

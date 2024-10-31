@@ -23,7 +23,13 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(signupUser(formData));
+    if (
+      formData.email !== "" &&
+      formData.password !== "" &&
+      formData.name !== ""
+    ) {
+      dispatch(signupUser(formData));
+    }
     console.log(`Sign success payload: ${formData}`);
   };
 

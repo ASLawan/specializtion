@@ -15,7 +15,7 @@ const ProductDetails = () => {
     dispatch(fetchProductById(id)); // Fetch product details by ID
   }, [dispatch, id]);
 
-  //   console.log(`Product: ${product}`);
+  console.log(`Product: ${product}`);
   if (loading) {
     return <p>Loading product details...</p>;
   }
@@ -23,7 +23,9 @@ const ProductDetails = () => {
   if (error) {
     return <p>Error loading product: {error}</p>;
   }
-
+  if (!product) {
+    return <p>No product details loading....</p>;
+  }
   return (
     <div className="product-detail">
       <div className="title">
@@ -31,7 +33,12 @@ const ProductDetails = () => {
       </div>
       <div className="content">
         <div className="product-img">
-          <img src={product?.image} alt={product?.name} />
+          <img
+            src={`http://localhost:5000/${product.image}`}
+            alt={product?.name}
+            width={250}
+            height={250}
+          />
         </div>
         <div className="product-info">
           <p>
