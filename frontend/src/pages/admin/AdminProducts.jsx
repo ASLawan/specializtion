@@ -72,6 +72,7 @@ const AdminProducts = () => {
                 <td colSpan="6" className="noproducts">
                   No products available
                 </td>
+                <p>lorem30</p>
               </tr>
             )}
           </tbody>
