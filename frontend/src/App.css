@@ -192,6 +192,7 @@ nav {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 2px 10px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
 }
 
 .signup .s-form input,
@@ -203,6 +204,12 @@ nav {
   padding-left: 10px;
   border-radius: 5px;
   border: none;
+}
+
+.signup .s-form input::placeholder,
+.login .l-form input::placeholder {
+  color: #1e2a38;
+  opacity: 1;
 }
 
 .signup .s-form button,
@@ -350,7 +357,8 @@ nav {
 }
 
 /* ADMIN ADD PRODUCT */
-.admin-add-product {
+.admin-add-product,
+.admin-edit-product {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -363,18 +371,21 @@ nav {
   margin-bottom: 2rem;
 }
 
-.admin-add-product h2 {
+.admin-add-product h2,
+.admin-edit-product h2 {
   color: snow;
 }
 
-.add-form {
+.add-form,
+.edit-form {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
   width: 100%;
 }
 
-.add-form input {
+.add-form input,
+.edit-form input {
   outline: none;
   border: none;
   padding-left: 0.5rem;
@@ -383,7 +394,8 @@ nav {
   color: gray;
 }
 
-.add-form textarea {
+.add-form textarea,
+.edit-form textarea {
   width: 100%;
   color: gray;
   height: 4rem;
@@ -394,7 +406,8 @@ nav {
   margin-bottom: 1rem;
 }
 
-.add-form button {
+.add-form button,
+.edit-form button {
   border: none;
   padding: 4px;
   font-weight: bold;
@@ -402,7 +415,8 @@ nav {
   border-radius: 5px;
   cursor: pointer;
 }
-.add-form button:hover {
+.add-form button:hover,
+.edit-form button:hover {
   background-color: #1e2a38;
   color: snow;
 }
@@ -581,6 +595,10 @@ nav {
 #prod {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+  margin-top: 2rem;
 }
 
 .prod-info {
@@ -637,6 +655,14 @@ nav {
   height: 200px;
   width: 200px;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prod-img img {
+  width: 150px;
+  height: 150px;
 }
 
 /* PRODUCT DETAIL */
@@ -672,7 +698,16 @@ nav {
   width: 300px;
   height: 300px;
   border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: snow;
 }
+
+/* .product-detail .content .product-img img {
+  width: 150px;
+  height: 150px;
+} */
 .product-detail .content .product-info {
   display: flex;
   flex-direction: column;
@@ -719,5 +754,166 @@ nav {
   font-family: "Times New Roman", Times, serif;
   font-size: 25px;
   font-weight: bold;
+  color: #1e2a38;
+}
+
+/* LOGOUT */
+.logout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #1e2a38;
+  width: 30%;
+  color: snow;
+  border-radius: 1rem;
+}
+
+.logout-text {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.logout-btn button,
+.cancel-btn button {
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 0.2rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: snow;
+  color: #1e2a38;
+  cursor: pointer;
+}
+
+.logout-btn button:hover,
+.cancel-btn button:hover {
+  background-color: #1e2a38;
+  color: snow;
+}
+
+/* EDIT PRODUCTS */
+.edit button,
+#del {
+  padding: 0.3rem 0.6rem;
+  border: none;
+  color: snow;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.edit button {
+  background-color: darkgreen;
+}
+
+#del {
+  background-color: darkred;
+}
+
+/* DELETE */
+.admin-delete {
+  background-color: #1e2a38;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 6rem;
+  gap: 2rem;
+  color: snow;
+  border-radius: 1rem;
+}
+
+/* CONTACT */
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+
+#half {
+  flex-basis: 50%;
+  align-self: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: #1e2a38;
+  padding: 4rem 1rem;
+  color: snow;
+  border-radius: 0.8rem;
+}
+
+#contact-title h3 {
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  color: #d1d1d1;
+}
+
+#form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #d1d1d1;
+  padding: 2rem;
+  border-radius: 0.8rem;
+}
+
+#form form input,
+#form form textarea {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1e2a38;
+  color: snow;
+  outline: none;
+}
+#form form input {
+  height: 1.8rem;
+}
+
+#form form input::placeholder,
+#form form textarea::placeholder {
+  color: snow;
+  opacity: 0.7;
+}
+
+#form form textarea {
+  height: 4rem;
+}
+
+#form form button {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1e2a38;
+  padding: 0.2rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: #d1d1d1;
+  background-color: #1e2a38;
+}
+
+#form form button:hover {
+  background-color: #d1d1d1;
   color: #1e2a38;
 }
