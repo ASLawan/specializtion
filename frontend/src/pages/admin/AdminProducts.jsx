@@ -8,8 +8,6 @@ const AdminProducts = () => {
   const dispatch = useDispatch();
   const { products, loading, error } = useSelector((state) => state.products);
 
-  // console.log(`Products: ${products}`);
-
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
@@ -17,7 +15,7 @@ const AdminProducts = () => {
   const handleDelete = (id) => {
     dispatch(deleteProduct(id));
   };
-
+  console.log(`Products: ${products}`);
   if (loading) {
     return <p>Loading products...</p>;
   }
@@ -53,16 +51,19 @@ const AdminProducts = () => {
                   <th>{product.stock}</th>
                   <th>
                     <Link
-                      to={`/admin/products/${product._id}/edit`}
+                      to={`/admin/editproduct/${product._id}`}
                       className="edit"
                     >
-                      Edit
+                      <button> Edit</button>
                     </Link>{" "}
                   </th>
                   <th>
-                    <button onClick={() => handleDelete(product._id)}>
+                    {/* <button onClick={() => handleDelete(product._id)} id="del">
                       Delete
-                    </button>
+                    </button> */}
+                    <Link to={`/admin/delproduct/${product._id}`}>
+                      <button id="del">Delete</button>
+                    </Link>
                   </th>
                 </tr>
               ))

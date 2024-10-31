@@ -12,7 +12,7 @@ const AdminAddProduct = () => {
     price: "",
     desscription: "",
     category: "",
-    image: "",
+    image: null,
     stock: 0,
   });
 
@@ -20,9 +20,11 @@ const AdminAddProduct = () => {
   const [showMessage, setShowMessage] = useState(false);
 
   const handleChange = (e) => {
+    const { name, value, files } = e.target;
     setProduct({
       ...product,
-      [e.target.name]: e.target.value,
+      // [e.target.name]: e.target.value,
+      [name]: files ? files[0] : value,
     });
   };
 
@@ -38,7 +40,7 @@ const AdminAddProduct = () => {
           price: "",
           desscription: "",
           category: "",
-          image: "",
+          image: null,
           stock: 0,
         });
       })
@@ -52,7 +54,7 @@ const AdminAddProduct = () => {
     if (showMessage) {
       const timer = setTimeout(() => {
         setShowMessage(false);
-      }, 1000);
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, [showMessage]);
@@ -87,8 +89,9 @@ const AdminAddProduct = () => {
           onTouchCancel={handleChange}
         />
         <input
-          type="text"
+          type="file"
           name="image"
+          accept="image/"
           placeholder="Image"
           onChange={handleChange}
         />

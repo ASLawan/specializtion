@@ -51,7 +51,7 @@ const AdminUsers = () => {
                   <td>{user.isAdmin ? "Admin" : "Customer"}</td>
                   {/* <td>{new Date(user.date).toLocaleDateString()}</td> */}
                   <td>
-                    <button onClick={() => handleDelete(user._id)}>
+                    <button onClick={() => handleDelete(user._id)} id="del">
                       Delete
                     </button>
                   </td>
